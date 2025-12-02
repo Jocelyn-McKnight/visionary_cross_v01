@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>3DHOP + Zenodo Example</title>
+    <script src="3dhop/3dhop.js"></script>
+    <link rel="stylesheet" href="3dhop/3dhop.css">
+</head>
+<body onload="init3dhop();">
+    <div id="3dhop" class="tdhop"></div>
+    <script>
+        function init3dhop() {
+            // Configurazione base del viewer
+            var viewer = new Viewer({
+                container: "3dhop",
+                backgroundColor: [0.9, 0.9, 0.9, 1],
+                trackball: "turntable",
+                models: {
+                    "mymodel": {
+                        url: "https://zenodo.org/records/17794756/files/Raven_Ruthwell_Cross_small.nxs",
+                        type: "nexus"
+                    }
+                },
+                scenes: {
+                    "scene": {
+                        models: ["mymodel"]
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>

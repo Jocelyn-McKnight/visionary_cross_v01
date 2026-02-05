@@ -1,2 +1,2 @@
-# vc_edition_test_2
+# visionary_cross_v01
 Second test of VC edition
